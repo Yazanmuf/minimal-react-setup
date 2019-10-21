@@ -4,10 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-"start": "node src/index.js",
+"start": "webpack-dev-server --config ./webpack.config.js --mode development",   
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
+  }
 }
+

@@ -1,27 +1,23 @@
 module.exports = {
-
-//1
-	entry: './src/index.js',
+  entry: './src/index.js',
   module: {
     rules: [
       {
-        test: /\.(js)$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
       }
     ]
   },
   resolve: {
-    extensions: ['*', '.js']
+    extensions: ['*', '.js', '.jsx']
   },
-//2
-	output: {
-		path: __dirname + '/dist',
-		publicPath: '/',
-		filename:'bundle.js'
-	},
-//3
-	devServer: {
-	contentBase: './dist'
-}
+  output: {
+    path: __dirname + '/dist',
+    publicPath: '/',
+    filename: 'bundle.js'
+  },
+  devServer: {
+    contentBase: './dist'
+  }
 };
